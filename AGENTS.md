@@ -71,6 +71,7 @@ Antigravity auto-discovers skills registered in [`.agents/skills.json`](file:///
 
 ### A. General Engineering & Workflow Skills
 - [**`fullstack-contract-flow`**](file:///E:/My-FullStack-Project/.agents/skills/fullstack-contract-flow/SKILL.md): 5-phase multi-agent contract delivery pipeline.
+- [**`context-mode`**](file:///E:/My-FullStack-Project/.agents/skills/context-mode/SKILL.md): Sandboxed code execution, FTS5 knowledge base, and context window optimization.
 - [**`setup-matt-pocock-skills`**](file:///E:/My-FullStack-Project/.agents/skills/setup-matt-pocock-skills/SKILL.md): Standardizing issue tracking, domain docs, and triage.
 - [**`grill-me`**](file:///E:/My-FullStack-Project/.agents/skills/grill-me/SKILL.md): Architecture review and design stress-testing.
 - [**`tdd`**](file:///E:/My-FullStack-Project/.agents/skills/tdd/SKILL.md): Unit and integration test enforcement.

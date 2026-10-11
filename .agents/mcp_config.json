@@ -1,11 +1,11 @@
 {
   "$schema": "https://antigravity.google/schemas/mcp_config.json",
   "mcpServers": {
-    "sqlite-helper": {
-      "command": "sqlite-mcp-server",
-      "args": ["./data.db"],
+    "context-mode": {
+      "command": "cmd.exe",
+      "args": ["/c", "context-mode"],
       "env": {
-        "DB_READONLY": "false"
+        "CONTEXT_MODE_PLATFORM": "antigravity-cli"
       }
     }
   }
