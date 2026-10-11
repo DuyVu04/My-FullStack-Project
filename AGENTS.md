@@ -86,6 +86,7 @@ Antigravity auto-discovers skills registered in [`.agents/skills.json`](file:///
 - [**`tailwind-css-patterns`**](file:///E:/My-FullStack-Project/.agents/skills/tailwind-css-patterns/SKILL.md): Design token architecture, responsive utilities, and clean styling.
 
 ### C. Backend Engineering Skills (for future `backend/`)
+- [**`spring-boot-project-creator`**](file:///E:/My-FullStack-Project/.agents/skills/spring-boot-project-creator/SKILL.md): Scaffolding build-ready Spring Boot 3 projects from Spring Initializr (DDD/Layered, JPA, Docker Compose).
 - [**`spring-ai`**](file:///E:/My-FullStack-Project/.agents/skills/spring-ai/SKILL.md): LLM integrations, ChatClient, Streaming, PromptTemplate, RAG, and Vector Stores.
 - [**`springboot-patterns`**](file:///E:/My-FullStack-Project/.agents/skills/springboot-patterns/SKILL.md): Layered architecture (Controller, Service, Repository, DTO), caching, async, and logging.
 - [**`java-spring-boot`**](file:///E:/My-FullStack-Project/.agents/skills/java-spring-boot/SKILL.md): Production-grade REST APIs, Actuator, Security, and JPA entities.

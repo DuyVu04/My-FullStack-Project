@@ -49,6 +49,12 @@
       "skillPath": "skills/spring-ai/SKILL.md",
       "computedHash": "9b9ef3cdcc1d6e7617d9e7da4ae59751b9e0b7a8124ffbc9c1323d75cd6566c6"
     },
+    "spring-boot-project-creator": {
+      "source": "giuseppe-trisciuoglio/developer-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/developer-kit-java/skills/spring-boot-project-creator/SKILL.md",
+      "computedHash": "f7ca6fc3dd4513e3da1090f2b5aef33193f21955a7012eca8f53797eed990c73"
+    },
     "springboot-patterns": {
       "source": "affaan-m/ecc",
       "sourceType": "github",
