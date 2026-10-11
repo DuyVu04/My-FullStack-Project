@@ -1,0 +1,111 @@
+# ==============================================================================
+# API CONTRACT SPECIFICATION TEMPLATE
+# All field names MUST use camelCase.
+# Timestamps MUST use ISO-8601 (YYYY-MM-DDTHH:mm:ssZ).
+# All error responses MUST follow RFC-7807 Problem Details.
+# ==============================================================================
+
+version: "1.0.0"
+feature: "feature-name"
+description: "High-level summary of the feature and its business purpose."
+
+endpoints:
+  - path: "/api/v1/resource-name"
+    method: "POST" # GET | POST | PUT | PATCH | DELETE
+    summary: "Brief description of the operation"
+    auth:
+      required: true
+      roles: ["USER", "ADMIN"]
+
+    # --------------------------------------------------------------------------
+    # Request Payload
+    # --------------------------------------------------------------------------
+    request:
+      contentType: "application/json"
+      schema:
+        title: "CreateResourceRequest"
+        type: "object"
+        required:
+          - "title"
+          - "amount"
+        properties:
+          title:
+            type: "string"
+            minLength: 3
+            maxLength: 100
+            description: "Title of the resource"
+          amount:
+            type: "number"
+            minimum: 0
+            description: "Monetary amount in standard units"
+          metadata:
+            type: "object"
+            nullable: true
+            description: "Optional key-value attributes"
+
+    # --------------------------------------------------------------------------
+    # Response Payloads
+    # --------------------------------------------------------------------------
+    responses:
+      201:
+        description: "Resource successfully created"
+        contentType: "application/json"
+        schema:
+          title: "ResourceResponse"
+          type: "object"
+          required:
+            - "id"
+            - "title"
+            - "amount"
+            - "createdAt"
+          properties:
+            id:
+              type: "string"
+              format: "uuid"
+              description: "Unique identifier"
+            title:
+              type: "string"
+            amount:
+              type: "number"
+            createdAt:
+              type: "string"
+              format: "date-time"
+              description: "ISO-8601 timestamp"
+
+      400:
+        description: "Invalid request body or validation error (RFC-7807)"
+        schema:
+          $ref: "#/common/ProblemDetails"
+
+      401:
+        description: "Unauthorized - missing or invalid token"
+        schema:
+          $ref: "#/common/ProblemDetails"
+
+# ------------------------------------------------------------------------------
+# Common Shared Schemas
+# ------------------------------------------------------------------------------
+common:
+  ProblemDetails:
+    type: "object"
+    required:
+      - "status"
+      - "title"
+      - "detail"
+      - "timestamp"
+    properties:
+      status:
+        type: "integer"
+        example: 400
+      title:
+        type: "string"
+        example: "Bad Request"
+      detail:
+        type: "string"
+        example: "Field 'title' cannot be blank."
+      timestamp:
+        type: "string"
+        format: "date-time"
+      path:
+        type: "string"
+        example: "/api/v1/resource-name"
