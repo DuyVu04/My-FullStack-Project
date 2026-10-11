@@ -1,0 +1,37 @@
+# OS & IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.iml
+
+# Node / Frontend (for future builds)
+node_modules/
+.next/
+dist/
+build/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Java / Backend (for future builds)
+target/
+*.class
+.gradle/
+build/
+bin/
+*.jar
+*.war
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.log
+
+# Antigravity temporary caches
+# NOTE: .agents/ and skills-lock.json are tracked for team collaboration
+.gemini/

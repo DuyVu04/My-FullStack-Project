@@ -1,0 +1,12 @@
+{
+  "$schema": "https://antigravity.google/schemas/mcp_config.json",
+  "mcpServers": {
+    "sqlite-helper": {
+      "command": "sqlite-mcp-server",
+      "args": ["./data.db"],
+      "env": {
+        "DB_READONLY": "false"
+      }
+    }
+  }
+}
